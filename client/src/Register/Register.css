@@ -1,0 +1,75 @@
+/* Container for full-page layout */
+.register-container {
+    display: flex;
+    justify-content: flex-start;  /* Aligns to the left */
+    align-items: flex-start;      /* Aligns to the top */
+    height: 100vh;
+    padding: 20px; /* Provides some space from edges */
+}
+
+/* Form Styling */
+.register-form {
+    background: #f9f9f9;
+    padding: 25px;
+    box-shadow:  0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 320px;
+    text-align: center;
+    position: absolute;
+    top: 95px;   /* Distance from the top */
+    left: 90px;  /* Distance from the left */
+}
+
+/* Form Heading */
+.register-form h2 {
+    margin-bottom: 15px;
+    font-size: 22px;
+    color: #333;
+}
+
+/* Input Fields */
+.register-form input {
+    width: 92%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Input Focus Effect */
+.register-form input:focus {
+    border-color: #4facfe;
+    outline: none;
+}
+
+/* Submit Button */
+.register-form button {
+    width: 99%;
+    padding: 12px;
+    background: #4facfe;
+    color: rgb(220, 217, 217);
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.register-form button:hover {
+    background: #00c6ff;
+}
+
+/* ✅ Mobile Responsive Design */
+@media (max-width: 768px) {
+    .register-form {
+        width: 90%;  /* Adjusts width for smaller screens */
+        position: static; /* Removes absolute positioning */
+        margin: 20px auto; /* Centers the form */
+    }
+
+    .register-container {
+        justify-content: center; /* Centers in small screens */
+        align-items: flex-start;
+    }
+}
