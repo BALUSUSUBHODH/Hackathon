@@ -17,7 +17,7 @@ export default function Register() {
 
     function handleSubmit(e) {
         e.preventDefault();
-        axios.post("http://localhost:5000/api/auth/signup", formData)
+        axios.post("https://hackathon-jsaa.onrender.com/api/auth/signup", formData)
             .then((res) => {
                 localStorage.setItem("token", res.data.token);
                 setUser({ token: res.data.token, role: res.data.role });

@@ -17,7 +17,7 @@ export default function Cart() {
 
     async function fetchCartProducts() {
         try {
-            const res = await axios.get("http://localhost:5000/api/cart", {
+            const res = await axios.get("https://hackathon-jsaa.onrender.com/api/cart", {
                 headers: { Authorization: `Bearer ${user.token}` }
             });
             setCart(res.data.products);
@@ -34,7 +34,7 @@ export default function Cart() {
 
     async function removeFromCart(productId) {
         try {
-            const res = await axios.delete(`http://localhost:5000/api/cart/remove/${productId}`, {
+            const res = await axios.delete(`https://hackathon-jsaa.onrender.com/api/cart/remove/${productId}`, {
                 headers: { Authorization: `Bearer ${user.token}` }
             });
             setCart(res.data.cart.products);

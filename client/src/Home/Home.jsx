@@ -15,7 +15,7 @@ export default function Home() {
 
   async function fetchProducts() {
     try {
-      const res = await axios.get("http://localhost:5000/api/product");
+      const res = await axios.get("https://hackathon-jsaa.onrender.com/api/product");
       setProducts(res.data);
     } catch (err) {
       console.log("Error fetching products", err);
@@ -29,7 +29,7 @@ export default function Home() {
     }
     try {
       await axios.post(
-        "http://localhost:5000/api/cart/add",
+        "https://hackathon-jsaa.onrender.com/api/cart/add",
         { productId },
         {
           headers: { Authorization: `Bearer ${user.token}` },

@@ -15,7 +15,7 @@ export default function Login() {
 
   function handleLogin(e) {
     e.preventDefault();
-    axios.post("http://localhost:5000/api/auth/login", formData)
+    axios.post("https://hackathon-jsaa.onrender.com/api/auth/login", formData)
       .then((res) => {
         console.log("login response", res);
         if (res.status === 200) {
